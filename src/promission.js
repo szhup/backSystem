@@ -4,7 +4,8 @@ const Layout = _import('index');
 import store from './store'
 let getRouter
 router.beforeEach((to, from, next) => {
-    if (!getRouter) {//不加这个判断，路由会陷入死循环     
+    if (!getRouter) {//不加这个判断，路由会陷入死循环  
+        // 这里应该调取后台接口返回路由信息，这里为了简便直接手写了   
         getRouter = [
             {
                 path: '/index',
